@@ -90,7 +90,18 @@ public class Exercises {
      * @param head the head of the list
      */
     public static void makePositive(ListNode head) {
+        ListNode current = head;
 
+        while (current != null) {
+            if (current.next != null) {
+                current.data = Math.abs(current.data);
+                System.out.print(current + " -> ");
+            } else {
+                current.data = Math.abs(current.data);
+                System.out.print(current);
+            }
+            current = current.next;
+        }
     }
 
     /**
